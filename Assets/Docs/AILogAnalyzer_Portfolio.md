@@ -106,10 +106,7 @@ Unity 전송 전과 Python 수신 후 두 번 필터링한다. 이메일, Window
 
 이전 단계에 실제 Unity Qwen 표시와 TestWS 전송 성공 기록이 있지만, 이번 단계의 성공 수치로 다시 계산하지 않았다. 상세 근거는 `AILogAnalyzer_TestReport.md`에 기록했다.
 
-## 포트폴리오용 스크린샷 가이드
-
-현재 프로젝트에서 AI Log Analyzer 실행 화면 스크린샷 파일은 발견되지 않았다. 실제 실행 화면을 다음 순서로 직접 촬영하며 기존 이미지가 있다면 원본을 덮어쓰지 않는다.
-
+## 포트폴리오용 스크린샷
 ### Screenshot 01 — Unity AI Log Analyzer 전체 화면
 
 - 테스트 Error, Exception, Assert를 생성한다.
