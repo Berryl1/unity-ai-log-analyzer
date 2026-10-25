@@ -29,7 +29,7 @@ Tools/
 - [서버 설치·실행 및 API 문서](Tools/AILogAnalyzerServer/README.md)
 - [개발 계획 및 단계별 구현 기록](Assets/Docs/AILogAnalyzer_DevelopmentPlan.md)
 - [최종 테스트 결과](Assets/Docs/AILogAnalyzer_TestReport.md)
-- [포트폴리오 설명 및 스크린샷 가이드](Assets/Docs/AILogAnalyzer_Portfolio.md)
+- [포트폴리오 설명 및 스크린샷](Assets/Docs/AILogAnalyzer_Portfolio.md)
 
 ## 빠른 실행
 
