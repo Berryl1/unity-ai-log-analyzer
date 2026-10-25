@@ -97,50 +97,33 @@ Unity 전송 전과 Python 수신 후 두 번 필터링한다. 이메일, Window
 - 실제 `qwen2.5-coder:7b` Assertion 분석 및 품질 가드 재검증 성공
 - Slack Fake client 기반 승인, 변조, 만료, 중복, 오류 처리 검증 성공
 
-이번 단계에서 수행하지 않은 결과:
-
-- 실제 Unity UI 클릭 기반 전체 흐름
-- Unity 기존 Edit Mode/Play Mode 전체 회귀 테스트
-- Python 3.11 환경 실행
-- 실제 TestWS Slack 메시지 전송
-
 이전 단계에 실제 Unity Qwen 표시와 TestWS 전송 성공 기록이 있지만, 이번 단계의 성공 수치로 다시 계산하지 않았다. 상세 근거는 `AILogAnalyzer_TestReport.md`에 기록했다.
 
 ## 포트폴리오용 스크린샷
 ### Screenshot 01 — Unity AI Log Analyzer 전체 화면
 
-- 테스트 Error, Exception, Assert를 생성한다.
-- 오류 목록, 검색창, 유형 필터, 중복 횟수와 선택한 상세 정보를 한 화면에 배치한다.
-- 사용자 경로와 프로젝트 외 비공개 정보가 보이지 않는지 확인한다.
+<img width="1894" height="977" alt="image" src="https://github.com/user-attachments/assets/7dabf587-0e25-4cf2-8113-3895604c0205" />
+- Unity Console의 로그와 Analyzer 도구에 오류 목록에 나타나는 동일 오류 확인 화면
 
 ### Screenshot 02 — Python 및 Ollama 상태
 
-- FastAPI와 Ollama를 먼저 실행한다.
-- Unity의 Python 연결, Qwen 모델명·준비 상태와 Local LLM 모드가 보이게 촬영한다.
-- 터미널을 함께 촬영한다면 환경변수 값과 Token이 화면에 없도록 한다.
+<img width="1271" height="544" alt="image" src="https://github.com/user-attachments/assets/ec756241-7477-4860-81a3-780e51734e2b" />
+- Ollama의 분석이 가능한 상태이며, LLM 모델 명까지 나오는 화면
 
 ### Screenshot 03 — 실제 Qwen 분석 결과
 
-- 공개 가능한 합성 오류를 Local LLM으로 분석한다.
-- 발생 영역, 신뢰도, 분석 근거, 예상 원인, 해결 방법, 추가 확인 사항과 영향 범위가 보이게 한다.
-- 결과가 추정이라는 disclaimer를 포함한다.
+<img width="946" height="448" alt="스크린샷 2026-10-26 040531" src="https://github.com/user-attachments/assets/c9aaecd2-dedb-4954-8eb9-334b264d3e11" />
+<img width="949" height="503" alt="스크린샷 2026-10-26 040541" src="https://github.com/user-attachments/assets/4d1b5173-a232-49c8-952c-830f5ca3791a" />
+- 테스트용으로 만든 오류 사진과 로컬 LLM을 사용하여 예상원인, 해결 방법 제안, 확인 필요 사항, 예상 영향 범위가 필터링 되어 나오는 화면
 
 ### Screenshot 04 — Slack 메시지 전송
 
-- 별도 테스트 채널에서 Unity 미리보기와 승인 후 한 건만 전송한다.
-- Unity의 성공 상태와 Slack 채널의 동일 메시지를 각각 촬영한다.
-- 워크스페이스 비공개 이름, 실제 Channel ID, 사용자 이름과 Token은 가린다.
+<img width="942" height="293" alt="image" src="https://github.com/user-attachments/assets/9bfbc11c-1ceb-4231-aadd-676158179ac7" />
+<img width="498" height="598" alt="image" src="https://github.com/user-attachments/assets/803cc977-e3fb-45e1-aa04-4b541810da1e" />
+- Unity 화면: Qwen 분석 결과와 Slack 전송 성공 상태가 함께 표시된 화면
+- Slack 화면: 해당 채널에 Unity AI Log Analyzer 봇이 분석 결과를 게시한 화면
 
-### Screenshot 05 — 시스템 아키텍처
-
-- 이 문서 또는 서버 README의 Mermaid 다이어그램을 렌더링한다.
-- Unity/FastAPI/Ollama는 로컬 경계, Slack은 외부 서비스 경계임을 보이게 한다.
-
-## 이력서용 소개 문구
-
-Unity 6 게임 프로젝트에 독립형 AI Log Analyzer를 설계·구현했습니다. EditorWindow에서 오류를 수집·중복 집계하고, FastAPI와 Ollama 기반 Qwen2.5-Coder 7B로 구조화 분석한 뒤 사용자 승인 결과만 Slack에 공유했습니다. 이중 민감정보 필터, 응답 검증, 취소·타임아웃 및 중복 전송 방지와 56개 Python 자동 테스트를 적용했습니다.
-
-## 포트폴리오용 상세 설명
+## 상세 설명
 
 DiceAndDie 개발 과정의 반복적인 오류 확인과 공유 작업을 지원하기 위해 기존 게임 코드와 분리된 Unity Editor 도구를 구현했다. Unity에서는 제한된 queue와 중복 집계로 Console 오류를 관리하고, 개발자가 선택·승인한 로그만 localhost FastAPI에 전달한다. 서버는 Mock 또는 Ollama의 기존 Qwen2.5-Coder 7B 모델을 사용하며, JSON Schema와 Pydantic 검증 및 서버 품질 가드로 결과 구조와 불확실성을 관리한다.
 
