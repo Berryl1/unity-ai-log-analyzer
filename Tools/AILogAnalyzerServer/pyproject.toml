@@ -1,0 +1,10 @@
+[project]
+name = "dice-and-die-ai-log-analyzer-server"
+version = "0.5.0"
+description = "Local Unity log analysis server with Ollama and explicit Slack delivery"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]
