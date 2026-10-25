@@ -103,23 +103,27 @@ Unity 전송 전과 Python 수신 후 두 번 필터링한다. 이메일, Window
 ### Screenshot 01 — Unity AI Log Analyzer 전체 화면
 
 <img width="1894" height="977" alt="image" src="https://github.com/user-attachments/assets/7dabf587-0e25-4cf2-8113-3895604c0205" />
+
 - Unity Console의 로그와 Analyzer 도구에 오류 목록에 나타나는 동일 오류 확인 화면
 
 ### Screenshot 02 — Python 및 Ollama 상태
 
 <img width="1271" height="544" alt="image" src="https://github.com/user-attachments/assets/ec756241-7477-4860-81a3-780e51734e2b" />
+
 - Ollama의 분석이 가능한 상태이며, LLM 모델 명까지 나오는 화면
 
 ### Screenshot 03 — 실제 Qwen 분석 결과
 
 <img width="946" height="448" alt="스크린샷 2026-10-26 040531" src="https://github.com/user-attachments/assets/c9aaecd2-dedb-4954-8eb9-334b264d3e11" />
 <img width="949" height="503" alt="스크린샷 2026-10-26 040541" src="https://github.com/user-attachments/assets/4d1b5173-a232-49c8-952c-830f5ca3791a" />
+
 - 테스트용으로 만든 오류 사진과 로컬 LLM을 사용하여 예상원인, 해결 방법 제안, 확인 필요 사항, 예상 영향 범위가 필터링 되어 나오는 화면
 
 ### Screenshot 04 — Slack 메시지 전송
 
 <img width="942" height="293" alt="image" src="https://github.com/user-attachments/assets/9bfbc11c-1ceb-4231-aadd-676158179ac7" />
 <img width="498" height="598" alt="image" src="https://github.com/user-attachments/assets/803cc977-e3fb-45e1-aa04-4b541810da1e" />
+
 - Unity 화면: Qwen 분석 결과와 Slack 전송 성공 상태가 함께 표시된 화면
 - Slack 화면: 해당 채널에 Unity AI Log Analyzer 봇이 분석 결과를 게시한 화면
 
