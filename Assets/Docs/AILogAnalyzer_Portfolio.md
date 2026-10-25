@@ -3,7 +3,7 @@
 ## 프로젝트 개요
 
 - 프로젝트명: Unity AI Log Analyzer
-- 적용 프로젝트: DiceAndDie
+- 적용 프로젝트: DiceAndDie (개인 게임 개발 프로젝트)
 - 개발 목적: Unity 개발 과정에서 발생하는 오류의 수집, 분석 및 팀 공유 지원
 - 핵심 기능: 에디터 로그 수집, 로컬 LLM 분석, 검토·승인 기반 Slack 공유
 - 개발 환경: Unity 6000.0.32f1, Windows, Python/FastAPI, Ollama, Slack
